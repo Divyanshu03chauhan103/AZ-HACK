@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.logo {
+    flex: 1;
+    text-align: center;
+    padding-right: 40px;
+}
+
+.logo-image {
+    width: 100%; /* Initial width */
+    /* max-width: 100%; */
+}
+
+.signup-form {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.signup-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+}
+
+.signup-form input:focus {
+    outline: none;
+    border-color: #1f80e0;
+}
+
+.create-account {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1f80e0;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.create-account:hover {
+    background-color: #1063a5;
+}
+
+.google-login {
+    width: 100%;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.google-login img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.login-link {
+    margin-top: 1rem;
+    color: #bbb;
+}
+
+.login-link a {
+    color: #1f80e0;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column; 
+        padding: 20px;
+    }
+
+    .logo {
+        padding: 0;
+        margin-bottom: 20px; 
+    }
+
+    .logo-image {
+        width: 150px;
+    }
+
+    .signup-form {
+        width: 100%;
+        padding: 1.5rem; 
+        margin: 0;
+    }
+
+    .signup-form h2 {
+        font-size: 1.25rem;
+    }
+}
