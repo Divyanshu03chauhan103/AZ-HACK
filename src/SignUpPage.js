@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
 import './SignUpPage.css';
 
 const SignUpPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate(); // Initialize the navigate function
 
     const handleEmailChange = (e) => setEmail(e.target.value);
     const handlePasswordChange = (e) => setPassword(e.target.value);
@@ -11,6 +13,9 @@ const SignUpPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Email:', email, 'Password:', password);
+        
+        // Redirect to the login page after successful account creation
+        navigate('/login');
     };
 
     return (
@@ -35,6 +40,7 @@ const SignUpPage = () => {
                     required
                 />
                 <button type="submit" className="create-account">Create account</button>
+               
                 <button type="button" className="google-login">
                     <img src="google-icon.png" alt="Google icon" /> Continue with Google
                 </button>

@@ -1,0 +1,87 @@
+/* HomePage.css */
+
+.home-page {
+    text-align: center;
+    color: #ffffff;
+    background-color: #0f0f0f;
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+
+.welcome-text {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.highlight {
+    color: #f4c542;
+}
+
+.carousel-section {
+    margin-top: 40px;
+}
+
+.carousel {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.language-section {
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.language-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.language-card {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.language-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.language-card p {
+    margin-top: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.language-card.english {
+    background-color: #0071f3;
+}
+
+.language-card.hindi {
+    background-color: #ff4b32;
+}
+
+.language-card.telugu {
+    background-color: #5f4d30;
+}
+
+.language-card.tamil {
+    background-color: #e1a820;
+}
