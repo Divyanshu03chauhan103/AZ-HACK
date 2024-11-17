@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
 import './HomePage.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import axios from 'axios';
 
 const HomePage = () => {
+    const [dbStatus, setDbStatus] = useState('');  // State for DB status
+
     const settings = {
         dots: false,
         infinite: true,
@@ -26,11 +29,28 @@ const HomePage = () => {
         { name: 'தமிழ்', imgSrc: 'https://via.placeholder.com/150x200', color: 'tamil' },
     ];
 
+    useEffect(() => {
+        // Make the API call to check database connection
+        axios.get('http://localhost:3001/test-db')
+            .then((response) => {
+                setDbStatus(response.data);  // Update state with response data
+            })
+            .catch((error) => {
+                console.error('Error connecting to the backend:', error);
+                setDbStatus('Failed to connect to the database');
+            });
+    }, []);  // Empty dependency array means this will run once when the component mounts
+
     return (
         <div className="home-page">
             <Navbar />
             <h1 className="welcome-text">Welcome to <span className="highlight">prime</span> video</h1>
-            
+
+            {/* Display the database connection status */}
+            <div className="db-status">
+                <p>Database Connection Status: {dbStatus}</p>
+            </div>
+
             <section className="carousel-section">
                 <h2>Continue Watching</h2>
                 <Slider {...settings} className="carousel">
